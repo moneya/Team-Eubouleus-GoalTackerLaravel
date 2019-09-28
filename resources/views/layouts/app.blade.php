@@ -89,14 +89,14 @@
         class="list-group-item list-group-item-action bg-light"
         @endif
         >Dashboard</a>
-        <a href="#" 
+        <a href="{{ url('/mygoals') }}" 
          @if(Request::url() === url('/mygoals') )
         class="list-group-item list-group-item-action bg-light active"
         @else
         class="list-group-item list-group-item-action bg-light"
         @endif
         >My Goals</a>
-        <a href="#" 
+        <a href="{{ url('/settings') }}" 
          @if(Request::url() === url('/settings') )
         class="list-group-item list-group-item-action bg-light active"
         @else
