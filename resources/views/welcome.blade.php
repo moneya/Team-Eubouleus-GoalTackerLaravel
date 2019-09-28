@@ -1,19 +1,24 @@
 @extends('layouts.app')
+@section('content')
+      <div class="Main-body">
+  
+  <div class="firstline">Goal Tracking made easier
+  </div>
+  <div class="secondline">Get organised and track anything you 
+    want to build with the perfect routine 
+  </div>
+  <div class="actionbutton">
+   
+      <a href="{{ url('/login') }}" class="btn btn-md sign-up-btn btn-warning">start Now</a>
+      
+  </div>
+</div>
+@endsection
+    
+      
 
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            
-        </div>
+@section('footer')
+    <div class="footer">
+    <p>© 2019 | Team Eubouleus</p>
+</div>
+@endsection

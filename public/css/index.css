@@ -1,0 +1,198 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #0B0A07;
+}
+
+
+/* created to give background image space*/
+
+.Main-body {
+    background-image: url(https://res.cloudinary.com/onamusia/image/upload/v1569281466/arrow-2889040_1920_gthrpf.jpg);
+    /* position: absolute;  */
+    /* width: 1440px; */
+    height: 550px;
+    left: 0px;
+    /* top: 70px; */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .75);
+}
+
+@media screen and (max-width: 600px) and (min-width: 240px) {
+    .Main-body {
+        height: 700px;
+        width: 110%;
+    }
+}
+
+
+/*Nav Bar Stuff*/
+
+.nar {
+    margin-left: 600px!important;
+}
+
+@media screen and (max-width: 600px) {
+    .nar {
+        margin-left: 0px!important;
+    }
+}
+
+
+/* end nav  */
+
+.firstline {
+    position: absolute;
+    width: 627px;
+    height: 133px;
+    left: 130px;
+    top: 131px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 600px) {
+    .firstline {
+        width: 380px;
+        height: 80px;
+        font-size: 28px;
+        left: 30px;
+    }
+}
+
+.secondline {
+    position: absolute;
+    width: 553px;
+    height: 98px;
+    left: 130px;
+    top: 220px;
+    font-size: 36px;
+    line-height: 44px;
+    color: rgba(255, 255, 255, 0.73);
+}
+
+@media screen and (max-width: 600px) {
+    .secondline {
+        width: 380px;
+        height: 80px;
+        font-size: 28px;
+        left: 30px;
+    }
+}
+
+.actionbutton {
+    position: absolute;
+    width: 246px;
+    height: 40px;
+    left: 130px;
+    top: 362px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 5px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+    .actionbutton {
+        top: 400px;
+        left: 100px;
+    }
+}
+
+.sign-up-btn {
+    width: 200px;
+    height: 50px;
+    /* background-color: white; */
+    border: 0.5px solid rgb(18, 117, 199);
+    border-radius: 5px;
+    margin: 0 auto;
+    color: rgb(22, 20, 6);
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 1px 3px black;
+    cursor: pointer;
+}
+
+.sign-up-btn:hover {
+    color: white;
+    /* background-color: #E3D87E; */
+    border: 0.5px solid white;
+}
+
+i {
+    border: solid #FFFFFFba;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+a {
+    color: rgba(255, 255, 255, 0.73);
+    text-decoration: none;
+}
+
+.form {
+    border: 1px solid black;
+    height: 450px;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    background: rgb(224, 220, 220);
+    box-shadow: 5px 5px rgba(59, 54, 54, .71);
+    padding: 20px 10px 0 0;
+    /* margin-top: 100px; */
+}
+
+@media screen and (max-width: 600px) and (min-width: 240px) {
+    .form {
+        border: 1px solid black;
+        width: 300px;
+        height: 460px;
+        left: 40px;
+    }
+}
+
+.form h2 {
+    text-align: center;
+}
+
+.form p {
+    padding: 10px;
+    font-family: cursive;
+    font-family: cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 29px;
+    color: #0F052D;
+}
+
+.form form {
+    padding: 10px;
+}
+
+.footer {
+    height: 45px;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    width: 100%;
+    top: 100;
+    background-color: rgb(1, 1, 43);
+    padding: 5px;
+    /* border:1px solid red; */
+}
