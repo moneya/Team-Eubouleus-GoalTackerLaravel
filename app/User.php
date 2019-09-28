@@ -27,4 +27,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * The relationship to the user's Goals.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function goals()
+    {
+        return $this->hasMany(Goal::class);
+    }
+
+    /**
+     * The relationship to the user's tasks.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function todos()
+    {
+        return $this->hasMany(Todo::class);
+    }
 }

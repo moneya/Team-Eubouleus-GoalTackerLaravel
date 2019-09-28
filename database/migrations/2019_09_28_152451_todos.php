@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Goals extends Migration
+class Todos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class Goals extends Migration
      */
     public function up()
     {
-        Schema::create('goals', function (Blueprint $table) {
+        Schema::create('todos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('about');
-            $table->string('duedate');
-            $table->string('status')->default('inactive');
+            $table->string('title');
+            $table->boolean('completed')->default(false);
+            $table->unsignedInteger('goal_id');
             $table->unsignedInteger('user_id');
             $table->timestamps();
+
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('goal_id')->references('id')->on('goals')->onDelete('cascade');
         });
     }
 
