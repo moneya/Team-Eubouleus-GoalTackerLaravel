@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
+
+Route::post('/add-goal', 'GoalController@store')->name('storegoal');
+
+// Route
+Route::livewire('/mygoals', 'goals');
+Route::livewire('/goals/{id}', 'showgoal');
+
