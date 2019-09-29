@@ -11,12 +11,15 @@
 |
 */
 
+Route::middleware(['guest'])->group(function () {
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
+});
 
+Route::middleware(['auth'])->group(function () {
 Route::get('/dashboard', 'HomeController@index')->name('home');
 
 Route::post('/add-goal', 'GoalController@store')->name('storegoal');
@@ -24,4 +27,5 @@ Route::post('/add-goal', 'GoalController@store')->name('storegoal');
 // Route
 Route::livewire('/mygoals', 'goals');
 Route::livewire('/goals/{id}', 'showgoal');
-
+Route::livewire('/goals/{id}/edit', 'editgoal');
+});

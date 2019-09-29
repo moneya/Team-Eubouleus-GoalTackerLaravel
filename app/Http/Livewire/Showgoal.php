@@ -22,7 +22,13 @@ class Showgoal extends Component
     $this->goal;
     $this->totaltodo =  Todo::where('goal_id',$this->goal->id)->orderByDesc('created_at')->count();
     $this->donetodo =  Todo::where('goal_id',$this->goal->id)->where('completed',true)->count();
+    if($this->totaltodo > 0)
+    {
     $this->progress = number_format((($this->donetodo/ $this->totaltodo) * 100), 2);
+    }
+    else{
+        $this->progress = 0;
+    }
     }
 
     public function render()
@@ -66,6 +72,12 @@ class Showgoal extends Component
     //     // redirect('/goals/'.$this->goal->id);
     //     return redirect()->to('/contact-form-success');
     // }
+
+    public function deleteGoal($id)
+    {
+        Goal::find($id)->delete();
+        return redirect()->to('/mygoals');
+    }
 
     
 }

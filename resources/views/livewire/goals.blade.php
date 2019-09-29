@@ -12,6 +12,24 @@
         <div class="col-12 text-left  h-100 bg-white mb-4">
             <div class="text-grey p-3">Recent Goals</div>
         </div>
+
+         @if (session('success'))
+          <div class="alert alert-success alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+            {{ session('success') }}
+          </div>
+        @endif
+
+       @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                       <div class="alert alert-danger  alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>{{ $error }}</div>
+                @endforeach
+            @endif
     </div>
  </div>
 </div>
@@ -99,6 +117,15 @@
             @endif
         </div>
 
+        <div class="form-group">
+                <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                    <input type="text" name="duedate" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+                    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+        </div>
+
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="inactive" checked>
             <label class="form-check-label" for="exampleRadios1">
@@ -134,4 +161,13 @@
   $('#myInput').trigger('focus')
     })
     </script>
+
+    <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker4').datetimepicker({
+                    format: 'DD/MM/YYYY'
+                    {{--  format("dddd, MMMM Do YYYY, h:mm:ss a");  --}}
+                });
+            });
+        </script>
 @stop

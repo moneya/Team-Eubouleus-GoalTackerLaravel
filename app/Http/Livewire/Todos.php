@@ -25,7 +25,8 @@ class Todos extends Component
     public function mount($goalid)
     {
         $this->todo =  Todo::where('goal_id',$goalid)->orderByDesc('created_at')->get();
-        $this->goal = Goal::FindorFail($goalid);
+        // $this->goal = Goal::FindorFail($goalid);
+        $this->goal = $goalid;
     }
 
     public function addTodo()
@@ -42,13 +43,13 @@ class Todos extends Component
         Todo::create([
             'user_id' => auth()->id(),
             'title' => $this->title,
-            'goal_id' => $this->goal->id,
+            'goal_id' => $this->goal,
             'completed' => false,
          ]);
 
          $this->title = "";
 
-         return redirect()->to('/goals/'.$this->goal->id);
+         return redirect()->to('/goals/'.$this->goal);
 
            
 
@@ -57,7 +58,7 @@ class Todos extends Component
     public function deleteTodo($id)
     {
         Todo::find($id)->delete();
-        return redirect()->to('/goals/'.$this->goal->id);
+        return redirect()->to('/goals/'.$this->goal);
     }
 
     public function toggleTodo($id)
@@ -65,7 +66,7 @@ class Todos extends Component
         $todo = Todo::find($id);
         $todo->completed = !$todo->completed;
         $todo->save();
-        return redirect()->to('/goals/'.$this->goal->id);
+        return redirect()->to('/goals/'.$this->goal);
     }
 
     public function updateTodo($id, $title)
@@ -73,6 +74,6 @@ class Todos extends Component
         $todo = Todo::find($id);
         $todo->title = $title;
         $todo->save();
-        return redirect()->to('/goals/'.$this->goal->id);
+        return redirect()->to('/goals/'.$this->goal);
     }
 }
