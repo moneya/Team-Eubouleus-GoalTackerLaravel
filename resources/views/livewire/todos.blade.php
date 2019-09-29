@@ -24,11 +24,11 @@
             </div>
 
             <span class="float-right">
-            <a class="btn btn-sm btn-success {{ $todo->completed ? 'disabled' : ''}}" id="detailed" onclick="updateTodoPrompt('{{ $todo->title }}') || event.stopImmediatePropagation()"
-                        wire:click="updateTodo({{ $todo->id }}, todoUpdated)">&times;</a>
+            <a class="btn btn-sm btn-success text-white {{ $todo->completed ? 'disabled' : ''}}" id="detailed" onclick="updateTodoPrompt('{{ $todo->title }}') || event.stopImmediatePropagation()"
+                        wire:click="updateTodo({{ $todo->id }}, todoUpdated)"><i class="fa fa-edit"></i></a>
 
-            <a class="btn btn-sm btn-danger {{ $todo->completed ? 'disabled' : ''}}" id="detailed" onclick="confirm('Are you sure?') || event.stopImmediatePropagation()"
-                        wire:click="deleteTodo({{ $todo->id }})">&times;</a>
+            <a class="btn btn-sm btn-danger text-white {{ $todo->completed ? 'disabled' : ''}}" id="detailed" onclick="confirm('Are you sure?') || event.stopImmediatePropagation()"
+                        wire:click="deleteTodo({{ $todo->id }})"><i class="fa fa-trash"></i></a>
             </span>
                 
 

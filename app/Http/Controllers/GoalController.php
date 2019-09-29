@@ -17,11 +17,20 @@ class GoalController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(),[
             'name' => 'required|string',
             'about' => 'required|string',
-            // 'duedate' => 'required|string',
+            'duedate' => 'required|string',
           ]);
+
+          
+          if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+            }
+
+            else{
           $goal = new Goal([
             'name' => $request->get('name'),
             'about'=> $request->get('about'),
@@ -30,8 +39,11 @@ class GoalController extends Controller
             'status'=> $request->status
           ]);
           $goal->save();
-        return redirect('/mygoals')->with('success', 'Goal has been added');
+
+
+        return redirect()->back()->with('success', 'Goal has been added');
         // dd($goal);
+          }
     }
 
 }

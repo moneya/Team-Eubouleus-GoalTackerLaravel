@@ -7,6 +7,8 @@
         <div class="col-12 text-left  h-100 bg-white mb-4">
             <div class="text-grey p-3">Recent Goals</div>
         </div>
+
+        
     </div>
 
     @livewire('goals')

@@ -43,6 +43,8 @@
            
         </div>
     </div>
+      
+      {{-- start  Due date  --}}
 
     <div class="border-bt">
         <div class="text-center mt-3 mb-3 p-2">
@@ -56,6 +58,69 @@
         </div>
         <div class="clearfix mb-3"></div>
     </div>
+
+    {{--  Start status  --}}
+
+     <div class="border-bt">
+        <div class="text-center mt-3 mb-3 pt-2 pb-2">
+        <h5>Goal Status</h5>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="completed" 
+            @if( $goal->status === 'completed')
+                checked
+            @endif
+            >
+            <label class="form-check-label" for="exampleRadios1">
+               Done
+            </label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="ongoing"
+            @if( $goal->status === 'ongoing')
+                checked
+            @endif
+             >
+            <label class="form-check-label" for="exampleRadios1">
+               Ongoing
+            </label>
+        </div>
+
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="inactive"
+         @if( $goal->status === 'inactive')
+                checked
+            @endif
+        >
+        <label class="form-check-label" for="exampleRadios2">
+            Ongoing
+        </label>
+        </div>
+        
+           
+        </div>
+
+
+       
+    </div>
+
+     {{--  Star Action  --}}
+    <div class="border-bt">
+        <div class="text-center mt-3 mb-3 pt-2 pb-2">
+        <h5>About</h5>
+            <p>
+                <a class="btn btn-md btn-success" href="{{ url('/goals')}}/{{ $goal->id }}/edit" 
+                >Edit</a>
+            </p>
+
+            <p>
+                <button class="btn btn-md btn-danger"  onclick="confirm('Are you sure?') || event.stopImmediatePropagation()"
+                        wire:click="deleteGoal({{ $goal->id }})">Delete</button>
+            </p>
+           
+        </div>
+    </div>
+
     </div>
   
 

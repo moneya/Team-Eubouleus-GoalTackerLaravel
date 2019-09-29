@@ -25,6 +25,8 @@
     @endif
 
      @if(Request::url() != url('/') || Request::url() != url('/login') || Request::url() != url('/register'))
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
      <link href="{{ asset('css/style.css') }}" rel="stylesheet">
      
     @endif
@@ -78,7 +80,7 @@
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">
-      <a class="navbar-brand" href="{{ url('/') }}">
+      <a class="navbar-brand" href="{{ url('/dashboard') }}">
                     {{ config('app.name', 'Goal Tracker') }}
                 </a> </div>
       <div class="list-group list-group-flush">
@@ -115,7 +117,7 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        <button class="btn btn-secondary" id="menu-toggle"><i class="fas fa-align-left"></i></button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -162,6 +164,10 @@
     @yield('footer')
   <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+     @if(Request::url() != url('/') || Request::url() != url('/login') || Request::url() != url('/register'))
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+     @endif
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {
