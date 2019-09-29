@@ -90,7 +90,7 @@
         @endif
         >Dashboard</a>
         <a href="{{ url('/mygoals') }}" 
-         @if(Request::url() === url('/mygoals') )
+         @if(Request::url() === url('/mygoals') || Request::url() === '/goals/*' )
         class="list-group-item list-group-item-action bg-light active"
         @else
         class="list-group-item list-group-item-action bg-light"

@@ -14,7 +14,8 @@ class Todo extends Model
     protected $fillable = [
         'title',
         'completed',
-        'user_id'
+        'user_id',
+        'goal_id',
     ];
 
 
@@ -35,6 +36,6 @@ class Todo extends Model
      */
     public function goal()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Goal::class);
     }
 }
