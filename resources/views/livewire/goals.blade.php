@@ -40,7 +40,7 @@
       @foreach ($goals as $goal)
            <div class="col-xl-4 col-md-4 col-sm-6 mb-3">
                 <div class="card o-hidden h-200">
-                     <div class="card-body">
+                     <div class="card-body  text-center">
                         <h5 class="card-title">{{ $goal->name }}</h5>
                         {{--  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>  --}}
                         <p class="card-text"> {{ $goal->about }}</p>
@@ -71,7 +71,7 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                         <a class="text-primary dropdown-item" href="{{ url('/goals')}}/{{ $goal->id }}">View</a>
-                        <a class="text-info dropdown-item" href="#">Edit</a>
+                        <a class="text-info dropdown-item" href="{{ url('/goals')}}/{{ $goal->id }}/edit">Edit</a>
                         <a class="text-danger dropdown-item" onclick="confirm('Are you sure?') || event.stopImmediatePropagation()"
                         wire:click="deleteGoal({{ $goal->id }})">Delete</a>
                         </div>
