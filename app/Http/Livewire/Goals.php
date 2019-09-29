@@ -35,7 +35,7 @@ class Goals extends Component
     public function render()
     {
         return view('livewire.goals', [
-            'goals' => Auth::user()->goals() ->orderByDesc('created_at')->get(), 
+            'goals' => Auth::user()->goals()->orderByDesc('created_at')->get(), 
         ]);
         
     }
