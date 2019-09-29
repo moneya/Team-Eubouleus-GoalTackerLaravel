@@ -17,7 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{--  <link href="{{ asset('css/app.css') }}" rel="stylesheet">  --}}
+    <link href="{{ url('/css/app.css')}}" rel="stylesheet"> 
     
 
     @if(Request::url() === url('/') || Request::url() === url('/login') || Request::url() === url('/register'))
@@ -98,14 +99,14 @@
         class="list-group-item list-group-item-action bg-light"
         @endif
         >My Goals</a>
-        <a href="{{ url('/settings') }}" 
+        {{--  <a href="{{ url('/settings') }}" 
          @if(Request::url() === url('/settings') )
         class="list-group-item list-group-item-action bg-light active"
         @else
         class="list-group-item list-group-item-action bg-light"
         @endif
         
-        >Setting</a>
+        >Setting</a>  --}}
         {{--  <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>  --}}
