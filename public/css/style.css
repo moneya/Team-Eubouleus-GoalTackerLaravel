@@ -89,3 +89,17 @@ body {
 .completed {
     text-decoration: line-through;
 }
+
+
+.btn-share{
+    position: relative;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 1px 8px 1px 6px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 15px;
+}
