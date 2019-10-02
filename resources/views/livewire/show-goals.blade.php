@@ -59,6 +59,10 @@
         <div class="clearfix mb-3"></div>
     </div>
 
+
+    @auth
+        
+  
     {{--  Start status  --}}
 
      <div class="border-bt">
@@ -120,6 +124,8 @@
            
         </div>
     </div>
+
+      @endauth
 
     </div>
   

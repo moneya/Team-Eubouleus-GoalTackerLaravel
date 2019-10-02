@@ -39,5 +39,10 @@ return [
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
     ],
+    'facebook' => [
+        'client_id' => '460877651190203',
+        'client_secret' => '03a7325435695410c724c5fa09186296',
+        'redirect' => 'https://hng-goal-tracker.herokuapp.com/callback/facebook',
+      ], 
 
 ];
