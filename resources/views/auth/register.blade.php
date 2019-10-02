@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="Main-body">
-    <div class="row justify-content-center mt-3">
-        <div class="col-md-8">
+    <div class="row justify-content-center ">
+        <div class="col-md-8 mt-5">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
@@ -85,6 +85,13 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                        </div>
+
+                         <hr>
+                        <div class="form-group row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                            <a href="{{ url('/auth/redirect/facebook') }}" class="btn facebook"><i class="fab fa-facebook-square"></i> Facebook</a>
+                        </div>
                         </div>
                     </form>
                 </div>
