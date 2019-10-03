@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 });
 
+Route::get('/settings', function(){
+    return view('settings');
+});
 Auth::routes();
 Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
@@ -28,6 +31,10 @@ Route::get('/dashboard', 'HomeController@index')->name('home');
 
 Route::post('/add-goal', 'GoalController@store')->name('storegoal');
 
+
+Route::get('/settings', function () {
+    return view('setting');
+ });
 // Route
 Route::livewire('/mygoals', 'goals');
 
