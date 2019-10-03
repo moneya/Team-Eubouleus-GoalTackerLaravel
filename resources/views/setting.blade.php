@@ -9,7 +9,7 @@
                        Reset Password
                    </div>
                    <div class="card-body">
-                   <form method="POST" action="{{ route('password.update') }}">
+                       <form method="POST" action="{{ route('password.update') }}">
                        @csrf
                         <div class="form-group">
                        <label for="name">Current Password:</label>
