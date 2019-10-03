@@ -47,7 +47,7 @@
      @empty
          <div class="col-xl-12 mb-3">
                 <div class="card o-hidden h-200">
-                    You have added any goal yet
+                    You have not added any goal yet
                     <br>
                     <a href="{{ url('/mygoals') }}" class="btn btn-sm btn-primary">
                     Add a Goal
