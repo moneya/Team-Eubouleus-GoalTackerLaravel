@@ -34,7 +34,7 @@
 
    
 
-     @livewireAssets
+    
 </head>
 <body>
     
@@ -164,6 +164,7 @@
 
     @yield('footer')
   <!-- Scripts -->
+   @livewireAssets
     <script src="{{ asset('js/app.js') }}"></script>
      @if(Request::url() != url('/') || Request::url() != url('/login') || Request::url() != url('/register'))
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
