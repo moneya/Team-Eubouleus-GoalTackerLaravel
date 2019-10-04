@@ -76,7 +76,19 @@
                         wire:click="deleteGoal({{ $goal->id }})">Delete</a>
                         </div>
                         </div>
-                    </div>         
+           
+
+                    </div>   
+                    
+                       <!-- Share button placed in the footer -->
+                       <div class="card-footer text-muted">
+
+                          <a class ="btn-share card-link" href="https://wa.me/?text= {{ $goal->name }} + ''  + '{{ $goal->about }} ' + ''  +  shared from Eubolues Goal Tracker + '' + http://hng-goal-tracker.herokuapp.com/ " target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
+                          <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                          <script type="IN/Share" data-url="{{ $goal->about }}" ></script>
+                          </div>
+
+                          <!-- end of Share button placed in the footer -->
                 </div>
          </div>
        
