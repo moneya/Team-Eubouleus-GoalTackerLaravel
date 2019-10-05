@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-      <div class="Main-body">
+<div class="Main-body">
   
   <div class="firstline">Goal Tracking made easier
   </div>
@@ -13,6 +13,18 @@
       
   </div>
 </div>
+
+{{--  Enter your code @Vickyella  --}}
+
+
+{{--  End your code @Vickyella  --}}
+
+{{--  Enter your code @Valar  --}}
+
+
+{{--  End your code @Valar  --}}
+
+
 @endsection
     
       
@@ -20,5 +32,5 @@
 @section('footer')
     <div class="footer">
     <p>© 2019 | Team Eubouleus</p>
-</div>
+  </div>
 @endsection
