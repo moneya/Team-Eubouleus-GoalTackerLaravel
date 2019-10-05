@@ -18,11 +18,12 @@
 
     <!-- Styles -->
     {{--  <link href="{{ asset('css/app.css') }}" rel="stylesheet">  --}}
-    <link href="{{ url('/css/app.css')}}" rel="stylesheet"> 
+    <link href="{{ url('/css/app.css')}}" rel="stylesheet">
     
 
     @if(Request::url() === url('/') || Request::url() === url('/login') || Request::url() === url('/register'))
      <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/eyeView.css')}}" rel="stylesheet">
     @endif
 
      @if(Request::url() != url('/') || Request::url() != url('/login') || Request::url() != url('/register'))
@@ -165,6 +166,8 @@
     @yield('footer')
   <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/eyeView.js') }}"></script>
+
      @if(Request::url() != url('/') || Request::url() != url('/login') || Request::url() != url('/register'))
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>

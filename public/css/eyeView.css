@@ -1,0 +1,11 @@
+.fa {
+    position: absolute;
+    left:400px;
+    bottom:5px;
+    cursor: pointer;
+    color:#999;
+}
+
+.fa.active {
+    color:dodgerblue;
+}
