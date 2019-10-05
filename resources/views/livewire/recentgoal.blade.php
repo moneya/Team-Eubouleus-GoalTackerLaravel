@@ -41,13 +41,23 @@
                         wire:click="deleteGoal({{ $goal->id }})">Delete</a>
                         </div>
                         </div>
-                    </div>         
+                    </div>   
+                    
+                     <!-- Share button placed in the footer -->
+                     <div class="card-footer text-muted">
+
+<a class ="btn-share card-link" href="https://wa.me/?text= {{ $goal->name }} + ''  + '{{ $goal->about }} ' + ''  +  shared from Eubolues Goal Tracker + '' + http://hng-goal-tracker.herokuapp.com/ " target="_blank"> <i class="fab fa-whatsapp" aria-hidden="true"></i> Share </a>
+<script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+<script type="IN/Share" data-url=" http://hng-goal-tracker.herokuapp.com / {{ $goal->about }}" ></script>
+</div>
+
+<!-- end of Share button placed in the footer -->
                 </div>
          </div>
      @empty
          <div class="col-xl-12 mb-3">
                 <div class="card o-hidden h-200">
-                    You have added any goal yet
+                    You have not added any goal yet
                     <br>
                     <a href="{{ url('/mygoals') }}" class="btn btn-sm btn-primary">
                     Add a Goal
